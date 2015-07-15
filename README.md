@@ -1,4 +1,4 @@
-# Skrövs
+# Skröfs
 
 ## System prerequisites
 * JDK 1.8+
