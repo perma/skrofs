@@ -13,7 +13,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 @Profile("default")
 @Configuration
-public class DbConfiguration {
+public class JdbcDataSource {
 
 	@Value("${jdbc.driverClassName}")
 	private String jdbcDriverClassName;
