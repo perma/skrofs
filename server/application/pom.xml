@@ -8,8 +8,7 @@
 		<artifactId>skrofs-parent</artifactId>
 		<version>0.9</version>
 	</parent>
-	
-	<groupId>com.lundgbg</groupId>
+
 	<artifactId>skrofs-application</artifactId>
 	<packaging>jar</packaging>
 
@@ -33,7 +32,7 @@
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
-		</dependency>		
+		</dependency>
 
 		<!-- SQL Server JDBC Driver -->
 		<dependency>
@@ -73,6 +72,19 @@
 		<plugins>
 			<!-- <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
 				</plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.lundgbg.skrofs.Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>

@@ -8,8 +8,7 @@
 		<artifactId>skrofs-parent</artifactId>
 		<version>0.9</version>
 	</parent>
-	
-	<groupId>com.lundgbg</groupId>
+
 	<artifactId>skrofs-integration-tests</artifactId>
 	<packaging>jar</packaging>
 
@@ -23,6 +22,23 @@
 		<dependency>
 			<groupId>com.jayway.restassured</groupId>
 			<artifactId>rest-assured</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.unitils</groupId>
+			<artifactId>unitils-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.lundgbg</groupId>
+			<artifactId>skrofs-application</artifactId>
+			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

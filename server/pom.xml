@@ -8,7 +8,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.2.5.RELEASE</version>
 	</parent>
-	
+
 	<groupId>com.lundgbg</groupId>
 	<artifactId>skrofs-parent</artifactId>
 	<version>0.9</version>
@@ -23,7 +23,7 @@
 		<unitils-core.version>3.4.2</unitils-core.version>
 		<rest-assured.version>2.4.1</rest-assured.version>
 	</properties>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- DB connection pooling -->
@@ -31,7 +31,7 @@
 				<groupId>c3p0</groupId>
 				<artifactId>c3p0</artifactId>
 				<version>${c3p0.version}</version>
-			</dependency>		
+			</dependency>
 
 			<!-- SQL Server JDBC Driver -->
 			<dependency>
@@ -61,25 +61,25 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<profiles>
-	  <profile>
-         <id>default</id>
-         <activation>
-            <activeByDefault>true</activeByDefault>
-         </activation>
-         <modules>
-            <module>application</module>
-         </modules>
-      </profile>
-      <profile>
-         <id>integration-tests</id>
-         <modules>
-			<module>application</module>
-            <module>integration-tests</module>
-         </modules>
-      </profile>
-   </profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>application</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>integration-tests</id>
+			<modules>
+				<module>application</module>
+				<module>integration-tests</module>
+			</modules>
+		</profile>
+	</profiles>
 
 	<repositories>
 		<repository>
